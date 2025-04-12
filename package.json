@@ -1,6 +1,6 @@
 {
   "name": "@0xdev8/eslint-config-0xdev8",
-  "version": "1.0.0",
+  "version": "2.0.0-beta.1",
   "description": "Pacote centralizador para toda configuração de lint do ecossistema 0xdev8",
   "packageManager": "pnpm@10.8.0",
   "publishConfig": {
