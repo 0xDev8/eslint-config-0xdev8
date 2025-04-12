@@ -10,5 +10,6 @@ import deepAssign from './deepAssign.cjs';
 export function mergeConfig(...configs: Linter.LegacyConfig[]): Linter.LegacyConfig {
   const finalConfig: Linter.Config = {}
   deepAssign(finalConfig, dev8LintConfig, ...configs);
+  // @ts-ignore
   return finalConfig
 }
