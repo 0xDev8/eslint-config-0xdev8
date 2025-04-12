@@ -3,14 +3,18 @@
   "version": "1.0.1",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js,.ts",
-    "lint:fix": "eslint . --ext .js,.ts --fix"
+    "lint:legacy": "eslint . --ext .js,.ts --config .eslintrc.cjs",
+    "lint:legacy:fix": "eslint . --ext .js,.ts --fix --config .eslintrc.cjs",
+    "lint": "eslint . --ext .js,.ts --config .eslintrc.mjs",
+    "lint:fix": "eslint . --ext .js,.ts --fix --config .eslintrc.mjs"
   },
   "dependencies": {
+    "@0xdev8/eslint-config-0xdev8": "link:../../../../../../../Library/pnpm/global/5/node_modules/@0xdev8/eslint-config-0xdev8",
     "@stylistic/eslint-plugin-js": "1.7.2",
     "@tsconfig/node20": "20.1.2",
-    "eslint": "8.57.0",
-    "eslint-plugin-import": "2.29.1",
+    "eslint": "9.24.0",
+    "eslint-plugin-import": "2.31.0",
+    "globals": "16",
     "tslib": "2.6.2"
   },
   "devDependencies": {

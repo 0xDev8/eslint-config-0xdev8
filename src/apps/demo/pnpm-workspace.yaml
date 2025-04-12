@@ -1,0 +1,2 @@
+overrides:
+  '@0xdev8/eslint-config-0xdev8': link:../../../../../../../Library/pnpm/global/5/node_modules/@0xdev8/eslint-config-0xdev8
