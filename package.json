@@ -7,7 +7,7 @@
     "access": "public"
   },
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "files": [
     "dist",
     "README.md"
@@ -45,10 +45,12 @@
     "prelink": "pnpm build"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-js": "1.7.2",
+    "@eslint/js": "^9.24.0",
+    "@stylistic/eslint-plugin-js": "4.2.0",
     "@tsconfig/node20": "20.1.2",
+    "@types/eslint": "9.6.1",
     "eslint": "8.57.0",
-    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-import": "2.31.0",
     "tslib": "2.6.2"
   },
   "devDependencies": {
