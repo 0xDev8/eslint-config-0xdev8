@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Pacote centralizador para toda configuração de lint do ecossistema 0xdev8",
   "packageManager": "pnpm@10.8.0",
+  "private": false,
   "license": "MIT",
   "type": "commonjs",
   "files": [
