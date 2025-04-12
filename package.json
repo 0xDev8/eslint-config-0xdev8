@@ -1,0 +1,56 @@
+{
+  "name": "@0xdev8/eslint-config-0xdev8",
+  "version": "1.1.1",
+  "description": "Pacote centralizador para toda configuração de lint do ecossistema 0xdev8",
+  "packageManager": "pnpm@10.8.0",
+  "license": "MIT",
+  "type": "commonjs",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/flat/index.js",
+      "require": "./dist/legacy/index.cjs",
+      "types": "./dist/types/legacy/index.d.cts"
+    },
+    "./flat": {
+      "import": "./dist/flat/index.js",
+      "require": "./dist/flat/index.js",
+      "types": "./dist/types/flat/index.d.ts"
+    },
+    "./legacy": {
+      "import": "./dist/legacy/index.cjs",
+      "require": "./dist/legacy/index.cjs",
+      "types": "./dist/types/legacy/index.d.cts"
+    },
+    "./legacy/utils": {
+      "import": "./dist/legacy/utils/index.cjs",
+      "require": "./dist/legacy/utils/index.cjs",
+      "types": "./dist/types/legacy/utils/index.d.cts"
+    }
+  },
+  "repository": "https://github.com/0xdev8/eslint-config-0xdev8.git",
+  "author": "Carlos Henrique <carloshpds@gmail.com>",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b && pnpm build:legacy",
+    "build:legacy": "tsc -p ./tsconfig.legacy.json",
+    "prepublishOnly": "pnpm build",
+    "dev": "tsc -w",
+    "dev:legacy": "tsc -p ./tsconfig.legacy.json -w",
+    "prelink": "pnpm build"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "1.7.2",
+    "@tsconfig/node20": "20.1.2",
+    "eslint": "8.57.0",
+    "eslint-plugin-import": "2.29.1",
+    "tslib": "2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.28",
+    "shx": "0.3.4",
+    "typescript": "5.2.2"
+  }
+}

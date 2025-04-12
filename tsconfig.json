@@ -1,0 +1,38 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "allowJs": true,
+    "declarationDir": "dist/types",
+    "importHelpers": true,
+    "outDir": "dist",
+    "rootDir": "./src/apps/module",
+    "strict": false,
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/apps/module/*",
+      ],
+      "basebuild/*": [
+        "node_modules/basebuild/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/apps/module/**/*.ts"
+, "src/apps/module/legacy/config.cts", "src/apps/module/legacy/config.cts", "src/apps/module/legacy/index.cts", "src/apps/module/legacy/index.cts"  ],
+  "exclude": [
+    "src/apps/module/legacy/**/*.cjs",
+    "src/apps/module/**/*.spec.ts",
+  ],
+  "ts-node": {
+    "esm": true
+  },
+  "types": [
+    "node",
+  ]
+}
